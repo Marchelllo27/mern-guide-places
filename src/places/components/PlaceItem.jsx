@@ -76,7 +76,7 @@ const PlaceItem = props => {
         <Card className={classes["place-item__content"]}>
           <div className={classes["place-item__image"]}>
             <img
-              src={`${process.env.REACT_APP_API}/${props.image}`}
+              src={`${process.env.REACT_APP_API}/api/places/images/${props.image}`}
               alt={props.title}
             />
           </div>

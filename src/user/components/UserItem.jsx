@@ -6,15 +6,13 @@ import Avatar from "../../shared/components/UIElements/Avatar";
 import classes from "./UserItem.module.css";
 
 const UserItem = props => {
+
   return (
     <li className={classes["user-item"]}>
       <Card className={classes["user-item__content"]}>
         <Link to={`/${props.id}/places`}>
           <div className={classes["user-item__image"]}>
-            <Avatar
-              image={`${process.env.REACT_APP_API}/${props.image}`}
-              alt={props.name}
-            />
+            <Avatar image={props.image} alt={props.name} />
           </div>
           <div className={classes["user-item__info"]}>
             <h2>{props.name}</h2>
